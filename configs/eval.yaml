@@ -1,0 +1,10 @@
+test_data: "data/eval/ifeval/fineweb_200000_test.jsonl"
+eval_model: "gpt-4.1-mini"
+verify_template: "prompt/verify.md"
+max_new_tokens: 10
+temperature: 0.7
+top_p: 0.95
+top_k: 0
+repetition_penalty: 1.0
+single_process: false
+num_processes: 16
