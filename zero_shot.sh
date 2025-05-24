@@ -10,7 +10,7 @@ TOP_P=0.95
 REPETITION_PENALTY=1.0
 EVAL_MODEL=gpt-4.1-mini
 VERIFY_TEMPLATE=prompt/verify.md
-DATA_PATH=data/fineweb_200000_test.jsonl
+DATA_PATH=data/ultrabench_test.jsonl
 EVAL_NUM_PROCESSES=16
 
 HF_MODELS=(
