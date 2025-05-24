@@ -31,7 +31,7 @@ def main():
 
     args = parser.parse_args()
 
-    data = load_data(args.test_data)[:10]
+    data = load_data(args.test_data)
 
     tokenizer = AutoTokenizer.from_pretrained('Qwen/Qwen3-8B') 
     prompts = [tokenizer.apply_chat_template([{"role": "user", "content": item["instruction"]}], tokenize=False, add_generation_prompt=True) for item in data]

@@ -1062,7 +1062,10 @@ class KeySentenceChecker(Instruction):
       # TODO(jeffrey) make a generate sentences function? wonderwords package
       self._key_sentences = set(["For now, this is fine."])
     else:
-      self._key_sentences = key_sentences
+      if isinstance(key_sentences, str):
+        self._key_sentences = set([key_sentences])
+      else:
+        self._key_sentences = key_sentences
 
     if not num_sentences:
       self._num_sentences = random.randint(1, len(self._key_sentences))
